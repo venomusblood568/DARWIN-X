@@ -26,4 +26,4 @@ Since it was not feasible for me to work on the jarvs-inspired project last year
 | Weather Information             |need to update temperature in realtime|
 | Graphical User Interface (GUI)  | need to fix some things in GUI|
 | Program Termination             | add more hot words|
-
+| take input in both hindi and english          | can be better|
