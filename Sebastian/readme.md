@@ -16,3 +16,14 @@ Since it was not feasible for me to work on the jarvs-inspired project last year
 
 
 
+
+## Features and Bug Fixes
+
+| Features                        | Bug Fixes                     |
+|---------------------------------|-------------------------------|
+| Greeting and Conversation       |have to add converation|
+| Time and Date                   | |
+| Weather Information             |need to update temperature in realtime|
+| Graphical User Interface (GUI)  | need to fix some things in GUI|
+| Program Termination             | add more hot words|
+
