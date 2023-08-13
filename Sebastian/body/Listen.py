@@ -1,21 +1,10 @@
-# step1 = googletrans
-# step2 
-    #1 = listen
-    #2= english translation
-    #3= connect
-
-# requirement speech recoginition
-# brew install flac
-# requiremnet googletrans
-# pip install translate
-#pip install langdetect
-#pip install detect
 import datetime
 import speech_recognition as sr
 from googletrans import Translator
 import os
 import pygame
 import pytemperature
+import sys
 
 # Listen function
 def listen():
@@ -93,35 +82,52 @@ def get_temperature():
 def sleep():
     speak("Goodbye, sir! Take care.")
     # Add any additional actions you want to perform before sleeping
-    
+
+def terminate():    
+    sys.exit(0)  # this will terminate the system
+
+def wait():
+    global waiting
+    waiting = True
+    speak("I'm waiting for you to say 'daddies home'.")
 
 # MicExecution function
 def MicExecution():
+    global waiting
+    waiting = False  # Initialize waiting variable
+    
     greet()
     current_date, current_time = get_date_time()
     temperature = get_temperature()
 
-    speak(f"The current date is {current_date}.")
-    speak(f"The current time is {current_time}.")
-    speak(f"The current temperature is {temperature} degrees Fahrenheit.")
-    speak("How can I assist you today, sir?")
+    # speak(f"The current date is {current_date}.")
+    # speak(f"The current time is {current_time}.")
+    # speak(f"The current temperature is {temperature} degrees Fahrenheit.")
+    # speak("How can I assist you today, sir?")
     
     while True:
         query = listen()
         if query:
             translation = TranslationHinTong(query)
-            # Add your logic for further instructions here
-            # Example: check for keywords and respond accordingly
-            # if "weather" in translation:
-            #     speak("The weather today is...")
-            # elif "news" in translation:
-            #     speak("Here are the latest news headlines...")
-            # elif "bye" in translation:
-            #     sleep()
             if "Go to sleep" in translation:
                 sleep()
                 break  # Exit the while loop and end the program
+            elif "Fuck off" in translation:
+                terminate()    
+            elif "Hold on" in translation:
+                wait()
+                while waiting:
+                    query = listen()
+                    if query:
+                        translation = TranslationHinTong(query)
+                        if "Daddy's Home" in translation:
+                            waiting = False
+                            speak("Welcome back sir! sebastian at your service")
+                            break
+            elif waiting:
+                speak("I'm still waiting.")
             else:
                 speak("I'm sorry, I cannot assist with that.")
 
-MicExecution()
+if __name__ == "__main__":
+    MicExecution()
