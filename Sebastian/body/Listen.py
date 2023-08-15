@@ -100,10 +100,10 @@ def MicExecution():
     current_date, current_time = get_date_time()
     temperature = get_temperature()
 
-    # speak(f"The current date is {current_date}.")
-    # speak(f"The current time is {current_time}.")
-    # speak(f"The current temperature is {temperature} degrees Fahrenheit.")
-    # speak("How can I assist you today, sir?")
+    speak(f"The current date is {current_date}.")
+    speak(f"The current time is {current_time}.")
+    speak(f"The current temperature is {temperature} degrees Fahrenheit.")
+    speak("How can I assist you today, sir?")
     
     while True:
         query = listen()
