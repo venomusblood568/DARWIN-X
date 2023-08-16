@@ -12,10 +12,7 @@ Welcome Sir, Sebastian at your service
 
 
 
-Since it was not feasible for me to work on the jarvs-inspired project last year, I decided to make the initials this time around. Right now, sebastian greet tells you the time, date, and temperature. I also integrated the gui, and when you say "go to sleep," the programme closes.
-
-
-
+Since it was not feasible for me to work on the jarvs-inspired project last year, I decided to make the initials this time around. Right now, Sebastian greet tells you the time, date, and temperature. I also integrated the gui, and when you say "go to sleep," the programme closes. and i am keep on adding some of the features 
 
 ## Features and Bug Fixes
 
@@ -29,3 +26,5 @@ Since it was not feasible for me to work on the jarvs-inspired project last year
 | take input in both hindi and english          | can be better|
 | fuck off                        |    No Issues                       |
 | hold on & resume |  No Issues|
+|greets fucntion| No Issues|
+|sorry function|No Issues|
