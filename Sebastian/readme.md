@@ -3,11 +3,6 @@
 Welcome Sir, Sebastian at your service  
 
 
-# Sebastian inital
-link of the notion page where i plan what i have to add...
-
-link == https://www.notion.so/SEB-FEATURES-431adf63a2694f23905eb1edde2326cf?pvs=4
-
 ## Features and Bug Fixes
 
 | Features                        | Bug Fixes                     |
