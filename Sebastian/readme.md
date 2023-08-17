@@ -28,3 +28,4 @@ Since it was not feasible for me to work on the jarvs-inspired project last year
 | hold on & resume |  No Issues|
 |greets fucntion| No Issues|
 |sorry function|No Issues|
+|conversation log|i can fetch normal but can't fetch WEBVTT output | 
