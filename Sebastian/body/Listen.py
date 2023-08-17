@@ -97,7 +97,7 @@ def terminate():
 def wait():
     global waiting
     waiting = True
-    speak("I'm waiting for you to say 'daddies home'.")
+    speak("hmmmmmmmmm")
 
 #greets fucntion
 def greet_me():
@@ -290,13 +290,65 @@ def apology():
     randome_apologies = random.choice(apologies)
     speak(randome_apologies)
 
+#trial function for checking each time [collection of 50 line on AI and ML]
+def line():
+    trial_lines = [
+    "Artificial Intelligence is revolutionizing industries.",
+    "Machine Learning algorithms can analyze vast amounts of data.",
+    "AI systems can understand and process natural language.",
+    "Deep Learning models are used for image recognition.",
+    "Reinforcement Learning is used in training autonomous agents.",
+    "Chatbots use NLP to provide human-like interactions.",
+    "ML algorithms can predict stock market trends.",
+    "AI can optimize supply chain logistics.",
+    "Neural networks are inspired by the human brain.",
+    "Unsupervised Learning finds hidden patterns in data.",
+    "Transfer Learning speeds up model training.",
+    "AI-powered virtual assistants enhance productivity.",
+    "ML can assist in medical diagnosis.",
+    "AI can play games like chess and Go at a superhuman level.",
+    "Sentiment analysis predicts public opinion.",
+    "Clustering groups similar data points together.",
+    "AI ethics addresses bias in algorithms.",
+    "ML models require labeled training data.",
+    "Natural Language Processing enables language understanding.",
+    "AI can automate routine tasks.",
+    "Decision Trees help make choices based on conditions.",
+    "AI interprets images through Convolutional Neural Networks.",
+    "ML algorithms classify spam emails.",
+    "AI-powered recommendation systems suggest products.",
+    "Regression predicts numeric values in datasets.",
+    "Generative Adversarial Networks create realistic images.",
+    "AI models can compose music and art.",
+    "ML models can be prone to overfitting.",
+    "AI can analyze sentiment on social media.",
+    "Support Vector Machines classify data points.",
+    "ML algorithms can identify credit card fraud.",
+    "AI-driven autonomous vehicles navigate without human input.",
+    "Dimensionality reduction techniques improve efficiency.",
+    "AI-assisted language translation bridges communication gaps.",
+    "Ensemble Learning combines multiple models for better results.",
+    "AI in healthcare aids in personalized treatment.",
+    "ML models power recommendation engines on streaming platforms.",
+    "AI can predict equipment maintenance needs.",
+    "Time Series Analysis forecasts future trends.",
+    "AI-powered drones are used in various industries.",
+    "ML algorithms help in DNA sequencing.",
+    "AI improves customer experiences through personalization.",
+    "Transfer Learning adapts knowledge from one domain to another.",
+    "AI analyzes patterns in financial markets.",
+    "ML algorithms optimize energy consumption.",
+    "AI in education enables personalized learning paths.",
+    "Natural Language Generation produces human-like text.",
+    "AI diagnoses diseases from medical images.",
+    "ML models assist in fraud detection.",
+    "AI-powered language models generate human-like text.",
+    "AI and ML are shaping the future of technology.",
+]
+    randome_try = random.choice(trial_lines)
+    speak(randome_try)
 
-
-
-
-
-
-
+    
 
 
 # MicExecution function
@@ -320,7 +372,7 @@ def MicExecution():
             if "Go to sleep" in translation:
                 sleep()
                 break  # Exit the while loop and end the program
-            elif "Fuck off" in translation:
+            elif "Fuck off" in translation or "Quit" in translation or "Ternimate" in translation or "Abort" in translation:
                 terminate()    
             elif "Hold on" in translation:
                 wait()
@@ -336,8 +388,10 @@ def MicExecution():
                 speak("I'm still waiting.")
             elif "Hey kid" in translation or "Sebastian" in translation or "Morning" in translation or "Afternoon" in translation or "Evening" in translation:
                 greet_me()
+            elif "Try" in translation or "Speak" in translation or "Talk" in translation or "Bark" in translation:
+                line()
             else:
-                apology
+                apology()
 
 if __name__ == "__main__":
     MicExecution()
