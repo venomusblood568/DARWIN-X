@@ -4,15 +4,9 @@ Welcome Sir, Sebastian at your service
 
 
 # Sebastian inital
+link of the notion page where i plan what i have to add...
 
-
-## Daily Log
-
-### July 16, 2023
-
-
-
-Since it was not feasible for me to work on the jarvs-inspired project last year, I decided to make the initials this time around. Right now, Sebastian greet tells you the time, date, and temperature. I also integrated the gui, and when you say "go to sleep," the programme closes. and i am keep on adding some of the features 
+link == https://www.notion.so/SEB-FEATURES-431adf63a2694f23905eb1edde2326cf?pvs=4
 
 ## Features and Bug Fixes
 
