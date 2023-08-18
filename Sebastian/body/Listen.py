@@ -348,6 +348,67 @@ def line():
     randome_try = random.choice(trial_lines)
     speak(randome_try)
 
+def introduction():
+    speak("I'm Sebastian, your AI companion, like JARVIS. I was created on July 16th, 2023. I'm the first AI in 'Project 5', starting as 'Project 0'.")
+    speak("I'm named after 'Black Butler'. I run on macOS M1, with 8GB RAM and 120GB memory. I promise endless knowledge. I'm here to help you, inspired by anime, evolving together.")
+
+def hi_response():
+    say_hi = [
+        "Hello there! How can I assist you today?",
+        "Hi! It's a pleasure to be here for you.",
+        "Hey, how's it going? I'm all ears.",
+        "Hiya! Ready to dive into some interesting conversations?",
+        "Hello! What's on your mind?",
+        "Hi there! What can I do to make your day awesome?",
+        "Hey! Let's tackle your questions together.",
+        "Hi, nice to meet you! How can I make your day better?",
+        "Hello! I'm here and ready to chat.",
+        "Hiya! Ready to explore new horizons of knowledge?",
+        "Hey there! How can I bring some positivity to your day?",
+        "Hi! Let's embark on a journey of discovery.",
+        "Hello, friend! How can I assist you today?",
+        "Hi, nice to see you! What's the plan?",
+        "Hey, it's great to have you here! What can I help you with?",
+        "Hi there! Ready to have a fantastic conversation?",
+        "Hello! I'm here to brighten your day with some AI magic.",
+        "Hi, how can I be of service to you?",
+        "Hey! Let's make today a productive and exciting one.",
+        "Hiya! Your friendly AI is at your service.",
+        "Hello! I'm here to answer your questions and more.",
+        "Hi, ready to dive into the world of possibilities?",
+        "Hey, it's a pleasure to meet you! How can I assist you today?",
+        "Hi there! Let's turn your ideas into reality.",
+        "Hello! I'm excited to assist you on this journey.",
+        "Hi, it's a new day full of potential. How can I help?",
+        "Hey! Let's make the most of our time together.",
+        "Hiya! Your virtual assistant is here to lend a hand.",
+        "Hello! Let's make today amazing with some AI-powered interactions.",
+        "Hi, ready to explore a world of knowledge and innovation?",
+        "Hey there! How about we tackle your tasks together?",
+        "Hi! I'm here to provide information, inspiration, and assistance.",
+        "Hello, friend! Let's dive into a realm of endless possibilities.",
+        "Hi, it's a pleasure to be your AI companion. How can I assist you?",
+        "Hey, nice to see you! Ready to make today productive?",
+        "Hi there! I'm here to make your day a little brighter.",
+        "Hello! Let's embark on a journey of discovery and learning.",
+        "Hi, ready to create some tech magic together?",
+        "Hey! Your digital friend is here to make your life easier.",
+        "Hiya! How can I infuse your day with AI-powered awesomeness?",
+        "Hello! Let's make each interaction count.",
+        "Hi, it's a wonderful day for some AI-powered interactions.",
+        "Hey there! Ready to make today more interesting?",
+        "Hi! I'm here to assist and make your day more delightful.",
+        "Hello, friend! Let's explore the world of technology together.",
+        "Hi, nice to see you! Ready to dive into our AI adventure?",
+        "Hey, it's great to have you here! Let's have some fun conversations.",
+        "Hiya! Let's make the most of our time and create something amazing.",
+        "Hello! I'm here to help you navigate the world of possibilities.",
+        "Hi, ready to make your tasks easier with some AI magic?",
+        "Hey! Let's make today productive and enjoyable with our AI interactions.",
+        "Hi there! How about we embark on a journey of learning and growth?",
+    ]
+    randome_hi = random.choice(say_hi)
+    speak(randome_hi)
     
 
 
@@ -360,10 +421,10 @@ def MicExecution():
     current_date, current_time = get_date_time()
     temperature = get_temperature()
 
-     speak(f"The current date is {current_date}.")
-     speak(f"The current time is {current_time}.")
-     speak(f"The current temperature is {temperature} degrees Fahrenheit.")
-     speak("How can I assist you today, sir?")
+    speak(f"The current date is {current_date}.")
+    speak(f"The current time is {current_time}.")
+    speak(f"The current temperature is {temperature} degrees Fahrenheit.")
+    speak("How can I assist you today, sir?")
     
     while True:
         query = listen()
@@ -372,7 +433,7 @@ def MicExecution():
             if "Go to sleep" in translation:
                 sleep()
                 break  # Exit the while loop and end the program
-            elif "Fuck off" in translation or "Quit" in translation or "Ternimate" in translation or "Abort" in translation:
+            elif "Fuck off" in translation or "Kill" in translation or "Terminate" in translation or "Abort" in translation:
                 terminate()    
             elif "Hold on" in translation:
                 wait()
@@ -390,6 +451,10 @@ def MicExecution():
                 greet_me()
             elif "Try" in translation or "Speak" in translation or "Talk" in translation or "Bark" in translation:
                 line()
+            elif "Seb introduce yourself" in translation or "Introduce the Sebastian yourself." in translation or "Introduce yourself sebestian." in translation or "Introduce yourself" in translation or "Who are you" in translation or "Introduce yourself" in translation: 
+                introduction()
+            elif "Say hi" in translation or "Hey" in translation or "Hello" in translation or "Hi" in translation or  "Hey there" in translation:
+                hi_response()
             else:
                 apology()
 
